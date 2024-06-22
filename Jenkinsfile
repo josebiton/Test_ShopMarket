@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Preparacion') {
             steps {
-                git branch: 'main', url: 'https://github.com/josebiton/shopmarket.git'
+                git branch: 'main', url: 'https://github.com/josebiton/Test_ShopMarket.git'
                 echo 'Pulled from GitHub successfully'
             }
         }
@@ -18,7 +18,7 @@ pipeline {
 
           stage('Docker Build') {
             steps {
-                sh 'docker build -t shopmarket .'
+                sh 'docker build -t Test_ShopMarket .'
             }
         }
         stage('Deploy php') {
