@@ -1,7 +1,7 @@
 services:
    appphp:
     image: Test_ShopMarket
-    container_name: shopmarket_v1
+    container_name: Test_ShopMarket_v2
     #restart: always
     ports:
       - 80:80
