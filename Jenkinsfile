@@ -24,6 +24,7 @@ pipeline {
           
         stage('Deploy php') {
             steps {
+                sh 'docker-compose down'
                 sh 'docker compose up -d'
             }
         }
