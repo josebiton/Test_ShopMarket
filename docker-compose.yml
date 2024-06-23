@@ -5,4 +5,4 @@ services:
     container_name: testmarket_v1
     #restart: always
     ports:
-      - 8081:80
+      - 80:80
