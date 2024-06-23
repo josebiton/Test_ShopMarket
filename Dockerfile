@@ -19,4 +19,4 @@ RUN docker-php-ext-install gd
 #COPY . /var/www/html/
 #RUN chmod -R a+r /var/www/html
 COPY . /var/lib/jenkins/workspace/Test_ShopMarket/
-RUN chmod -R a+r /var/lib/jenkins/workspace/Test_ShopMarket$/
+RUN chmod -R a+r /var/lib/jenkins/workspace/Test_ShopMarket/
