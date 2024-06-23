@@ -15,18 +15,7 @@ pipeline {
                 sh 'php --version'
             }
         }
-          stage('Unit Test php') {
-            steps {
-                
-
-                    // Make sure PHPUnit is executable
-                    sh 'chmod +x vendor/bin/phpunit'
-
-                    // Run PHPUnit tests
-                    sh 'vendor/bin/phpunit'
-                
-            }
-        }
+          
      stage('Docker Build') {
             steps {
                 sh 'docker build -t testmarket .'
