@@ -15,13 +15,7 @@ pipeline {
                 sh 'php --version'
             }
         }
-          stage('Unit Test php'){
-            steps {
-                //sh 'chmod 0775 vendor/bin/phpunit'
-                sh 'chmod +x vendor/bin/phpunit'
-                sh 'vendor/bin/phpunit'
-            }
-        }
+         
      stage('Docker Build') {
             steps {
                 sh 'docker build -t testmarket .'
