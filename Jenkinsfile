@@ -17,7 +17,7 @@ pipeline {
         }
      stage('Docker Build') {
             steps {
-                sh 'docker build -t shopmarket .'
+                sh 'docker build -t TestShopMarket .'
             }
         }
           
