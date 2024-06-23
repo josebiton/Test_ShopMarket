@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:8.1-apache
 
 RUN apt-get update
 RUN apt-get install --yes --force-yes cron g++ gettext libicu-dev openssl libc-client-dev libkrb5-dev libxml2-dev libfreetype6-dev libgd-dev libmcrypt-dev bzip2 libbz2-dev libtidy-dev libcurl4-openssl-dev libz-dev libmemcached-dev libxslt-dev
@@ -16,5 +16,7 @@ RUN docker-php-ext-enable mysqli
 RUN docker-php-ext-configure gd --with-freetype=/usr --with-jpeg=/usr
 RUN docker-php-ext-install gd
 
-COPY . /var/www/html/
-RUN chmod -R a+r /var/www/html
+#COPY . /var/www/html/
+#RUN chmod -R a+r /var/www/html
+COPY . /var/lib/jenkins/workspace/Test_ShopMarket/
+RUN chmod -R a+r /var/lib/jenkins/workspace/Test_ShopMarket/
