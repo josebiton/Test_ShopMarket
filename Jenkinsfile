@@ -15,6 +15,11 @@ pipeline {
                 sh 'php --version'
             }
         }
+          stage('Actualizacion') {
+            steps {
+                sh 'composer update'
+            }
+        }
      stage('Docker Build') {
             steps {
                 sh 'docker build -t testmarket .'
