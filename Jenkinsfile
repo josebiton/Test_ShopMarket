@@ -20,10 +20,10 @@ pipeline {
                 
 
                     // Make sure PHPUnit is executable
-                    sh 'chmod +x ./vendor/bin/phpunit'
+                    sh 'chmod +x vendor/bin/phpunit'
 
                     // Run PHPUnit tests
-                    sh './vendor/bin/phpunit'
+                    sh 'vendor/bin/phpunit'
                 
             }
         }
