@@ -15,7 +15,11 @@ pipeline {
                 sh 'php --version'
             }
         }
-
+     stage('Docker Build') {
+            steps {
+                sh 'docker build -t shopmarket .'
+            }
+        }
           
         stage('Deploy php') {
             steps {
