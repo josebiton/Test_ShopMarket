@@ -15,11 +15,18 @@ pipeline {
                 sh 'php --version'
             }
         }
-          stage('Unit Test php'){
+          stage('Unit Test php') {
             steps {
-                //sh 'chmod 0775 vendor/bin/phpunit'
-                sh 'chmod +x vendor/bin/phpunit'
-                sh 'vendor/bin/phpunit'
+                script {
+                    // Install dependencies (assuming you're using Composer)
+                    sh 'composer install'
+
+                    // Make sure PHPUnit is executable
+                    sh 'chmod +x vendor/bin/phpunit'
+
+                    // Run PHPUnit tests
+                    sh 'vendor/bin/phpunit'
+                }
             }
         }
      stage('Docker Build') {
