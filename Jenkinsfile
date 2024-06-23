@@ -16,11 +16,7 @@ pipeline {
             }
         }
 
-          stage('Docker Build') {
-            steps {
-                sh 'docker build -t Test_ShopMarket .'
-            }
-        }
+          
         stage('Deploy php') {
             steps {
                 sh 'docker compose up -d'
